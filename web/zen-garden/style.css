@@ -1,0 +1,147 @@
+/* css Zen Garden Ryan's style v0.01 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* Variables (not supported in IE, reference only) */
+:root {
+    --colour-background: #5894C2;
+    --colour-background2: #FFDA6B;
+    --colour-font-body-light: white;
+    --colour-font-body-dark: black;
+    --colour-font-body-highlight: #57C1A8;
+    --colour-shadow: rgba(0, 0, 0, 0.1);
+    
+}
+
+
+/* basic elements */
+html, body{
+  margin: 0px;
+  padding: 0px;
+}
+body {
+    font: 10px Arial;
+    position: relative;
+    background: var(--colour-background);
+    padding: 30px;
+}
+
+p, li {
+    color: var(--colour-font-body);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    margin-top: 2px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--colour-font-header);
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-size: 3em;
+    margin-left: -45px;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2 {
+    font-size: 10em;
+    margin-top: 10px;
+}
+h3 {
+    font-size: 3em;
+    margin-top: 10px;
+}
+footer{
+    padding: 15px;
+}
+
+abbr, a, a:visited {
+    color: var(--colour-font-body-highlight);
+}
+/* Background Colours */
+.intro, .explanation, .participation, .benefits, .requirements, .sidebar{
+    padding: 15px;
+}
+.intro, .participation, .requirements {
+    color: var(--colour-font-body-light);
+}
+.explanation, .benefits, .sidebar{
+    background-color: var(--colour-background2);
+    color: var(--colour-font-body-dark);
+    box-shadow: 5px 10px 3px var(--colour-shadow);
+}
+
+h1{
+    background-color: var(--colour-background2);
+    color: var(--colour-background);
+    display: inline-block;
+    padding: 5px 15px;
+    box-shadow: 5px 10px 3px var(--colour-shadow);
+    
+}
+
+footer{
+    background-color: var(--colour-background);
+    z-index: 2;
+    display: inline-block;
+    padding: 5px 15px;
+    box-shadow: inset 2px 8px 3px var(--colour-shadow);
+}
+footer a{
+    color: var(--colour-background2);
+}
+/* specific divs */
+.intro {
+
+}
+
+.main {
+    
+}
+
+.explanation{
+    
+}
+
+.participation{
+    
+}
+.benefits{
+    
+}
+.requirements{
+
+}
+.sidebar{
+    margin-left:   -20px;
+    margin-right:  -20px;
+    margin-bottom: -45px;
+}
+.sidebar .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 75%;
+    padding: 0px;
+    margin: 0px 10px;
+    flex: 1;
+    /* gap: 20px; */
+}
+.sidebar .wrapper ul{
+    padding-left: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+/* Desktop */

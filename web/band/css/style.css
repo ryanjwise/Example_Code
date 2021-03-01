@@ -1,0 +1,226 @@
+/* Variables */
+:root{
+  /* Fonts */
+  --font-text: 'Montserrat', sans-serif;
+  --font-headers: 'Permanent Marker', cursive;
+
+  /* Colours */
+  --color-white: #eee;
+  --color-black: #333;
+  --color-blackshade: #666;
+  --color-blackshade-t: #666666DD;
+  --color-highlight: #4caf50;
+}
+/* Document Sections */
+
+html, body {
+  min-height: 100%;
+  margin: 0px;
+}
+header {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  text-align: center;
+  padding-top: 1px;
+}
+main {
+  background: url("https://greepx.com/wp-content/uploads/2018/01/1515945715_995_royal-blood.jpg") no-repeat center fixed;
+  background-size: auto;
+  background-blend-mode: color-burn;
+  background-color: var(--color-blackshade);
+  min-height: 100%;
+}
+.push {
+  height: 60px;
+}
+footer {
+  font-size: 0.8em;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  clear: both;
+  height: 60px;
+  width: 100%;
+}
+section {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  clear: both;
+  padding: 10px;
+}
+
+/* Element Selectors */
+header h1 {
+  color: var(--color-highlight);
+}
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: underline;
+  color: var(--color-highlight);
+  font-family: var(--font-headers);
+  margin-top: 20px;
+  text-align: center;
+}
+p {
+  padding-top: 10px;
+  width: 80%;
+  margin: auto;
+  color: var(--color-white);
+  font-family: var(--font-text)
+}
+li {
+  color: var(--color-white);
+  font-family: var(--font-text)
+}
+a {
+  color: #ffc107;
+}
+a:visited{
+  color: #D12326;
+}
+
+/* Class Selectors */
+/* Navigation */
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px  solid var(--color-white);
+  overflow: hidden;
+}
+.nav-item a {
+  display: block;
+  width: 33.33%;
+  padding: 10px 0px;
+  color: var(--color-white);
+  font-family: var(--font-text);
+  text-align: center;
+  text-decoration: none;
+  float: left;
+}
+.nav-item a:hover:not(.active) {
+  background-color: var(--color-blackshade);
+}
+.nav-item .active, .nav-item a:active {
+  background-color: var(--color-highlight);
+}
+/* Section formatting */
+/* Discovery Page Layout */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album {
+  background-color: var(--color-blackshade-t);
+  margin-bottom: 20px;
+  padding: 10px 40px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 250px 300px;
+  grid-template-areas:
+	  "header header"
+	  "art tracks";
+    align-content: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 650px){
+    .album {
+      padding: 10px 20px;
+      grid-template-columns: 250px;
+      grid-template-areas:
+	      "header"
+	      "art"
+        "tracks";
+    }
+  }
+  
+  .album h3 {
+    margin-top: 0px;
+    display: grid;
+    grid-area: header;
+    justify-self: center;
+  }
+  
+  .album img {
+    height: 250px;
+    width: 250px;
+    display: grid;
+    grid-area: art;
+  }
+  
+  .album ol {
+    grid-area: tracks;
+}
+
+/* Bio Page Layout */
+.bandmember-item {
+  background-color: var(--color-blackshade-t);
+  margin-bottom: 20px;
+  padding: 10px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 250px 200px;
+  gap: 20px;
+  grid-template-areas:
+	  "photo name"
+	  "photo instruments";
+    align-content: center;
+    justify-content: center;
+}
+
+@media (max-width: 650px){
+  .bandmember-item {
+    padding: 10px 20px;
+    grid-template-columns: 250px;
+    gap: 20px;
+    grid-template-areas:
+      "name"
+      "photo"
+      "instruments";
+  }
+}
+    
+  .bandmember {
+    max-width: 250px;
+    max-height: auto;
+    grid-area: photo;
+    justify-self: center;
+  }
+
+  .musician-name {
+    grid-area: name;
+    justify-self: start;
+    align-self: start;
+  }
+  
+  .musician-instruments {
+    grid-area: instruments;
+    justify-self: start;
+    align-self: end;
+    
+    
+}
+
+/* Image Formatting */
+.cover-photo {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.album-cover {
+  max-width: 300px;
+}
+
+
+/* List Formatting */
+.bandmember-item {
+  clear: both;
+}
+.bandmember-list ul {
+  padding-left: 15px;
+  padding-top: 10px;
+  list-style: none;
+}

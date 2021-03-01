@@ -1,0 +1,18 @@
+.container {
+    height: 70vh;
+    width: 80%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 6px;
+}
+.square {
+    height: 100px;
+    width: 100px;
+    border: 1px dotted black;
+    background-color: powderblue;
+}
