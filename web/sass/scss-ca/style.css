@@ -1,0 +1,25 @@
+.movie-card {
+  width: 300px;
+  box-shadow: 1px 1px 5px lightgray;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.movie-card img {
+  width: 300px;
+}
+.movie-card h2 {
+  color: coral;
+}
+.movie-card button {
+  background: coral;
+  color: white;
+}
+.movie-card p {
+  font-style: italic;
+  font-weight: bold;
+}
+.movie-card .movie-info {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

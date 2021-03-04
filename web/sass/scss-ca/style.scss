@@ -1,0 +1,37 @@
+$card-width: 300px;
+$colour-hero: coral;
+
+@mixin italic-bold {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.movie-card {
+    width: $card-width;
+    box-shadow: 1px 1px 5px lightgray;
+    border-radius: 15px;
+    overflow: hidden;
+
+    img {
+        width: $card-width;
+    }
+
+    h2 {
+        color: $colour-hero;
+    }
+
+    button {
+        background: $colour-hero;
+        color: white;
+    }
+
+    p {
+        @include italic-bold()
+    }
+
+    .movie-info {
+        padding: 10px;
+    }
+}
+
+
