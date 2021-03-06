@@ -1,0 +1,15 @@
+/* Code source: https://stackoverflow.com/a/53746891 */
+
+html {
+    scroll-behavior: smooth;
+   }
+   
+   a {
+    text-decoration: none;
+    color: black;
+   } 
+   
+   #down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+   } 
