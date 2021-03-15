@@ -1,7 +1,7 @@
 #Initialise variables
-next_word = ''
-words = []
-array_size = 0
+next_word = '' #Temporary variable Holding user input before passing into words array
+words = []     #Array of words
+array_size = 0 #Holds Overall size of array
 
 #Output instructions and get first word
 puts "Sorts input words alphabetically"
