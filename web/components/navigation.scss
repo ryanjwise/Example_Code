@@ -1,0 +1,52 @@
+.nav-wrapper {
+    align-items: center;
+    .socials {
+      display: none;
+    }
+  }
+  nav {
+    padding: 0px 10px;
+    ul {
+      display: flex;
+      margin: 0px;
+      padding: 0px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    li {
+      list-style: none;
+      width: 100px;
+      height: 25px;
+      margin: 5px;
+  
+      a,
+      a:visited,
+      a:hover {
+        @include link-base;
+      }
+      a:hover {
+        @include link-hover;
+      }
+      a.active {
+        @include link-active;
+      }
+    }
+  }
+  /*
+  Media query enables display of socials on larger devices
+  and aligns nav buttons to the left.
+  */
+  @media screen and (min-width: 650px) {
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      .socials {
+        display: block;
+      }
+    }
+    nav {
+      ul {
+        justify-content: flex-start;
+      }
+    }
+  }
