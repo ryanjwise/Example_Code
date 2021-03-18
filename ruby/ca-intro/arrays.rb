@@ -19,6 +19,7 @@ arr.unshift(0)              # prepends 0
 # Methods
 arr.first
 arr.last
+arr.last(x)                 # Returns the last x array items
 arr.length
 arr.include?(x)             # Checks if x exists in array
 arr.sample                  # Take a random element from the array
