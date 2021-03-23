@@ -37,7 +37,7 @@ class Game
     end
 
     def display_lives
-        puts "You have #{@lives} lives remaining"
+        puts "You have #{@lives-1} lives remaining"
     end
 
     def display_instructions
