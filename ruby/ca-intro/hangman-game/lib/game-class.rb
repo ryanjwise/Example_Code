@@ -71,6 +71,10 @@ class Game
 
     def process_letter(letter)
         @guessed_letters << letter unless @guessed_letters.include?(letter)
+        if (@word.chars.uniq - @guessed_letters).empty?
+            display_word
+            win
+        end
         update_lives(letter)
     end
 
