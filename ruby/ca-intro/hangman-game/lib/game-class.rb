@@ -45,7 +45,7 @@ class Game
         puts "Enter a letter or your guess:"
     end
 
-    def all_letters(str)
+    def all_letters?(str)
         # Will return true only if passed string is alphanumeric
         str[/[a-zA-Z]+/]  == str
     end
@@ -53,7 +53,7 @@ class Game
     def user_input
         loop do
             input = gets.strip.downcase
-            if all_letters(input)
+            if all_letters?(input)
                 return input
             else
                 puts "Something went wrong, please input a letter, or make a guess!"
@@ -70,7 +70,7 @@ class Game
     end
 
     def process_letter(letter)
-        @guessed_letters << letter
+        @guessed_letters << letter unless @guessed_letters.include?(letter)
         update_lives(letter)
     end
 
