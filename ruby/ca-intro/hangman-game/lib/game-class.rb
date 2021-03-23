@@ -45,8 +45,21 @@ class Game
         puts "Enter a letter or your guess:"
     end
 
+    def all_letters(str)
+        # Use 'str[/[a-zA-Z]*/] == str' to let all_letters
+        # yield true for the empty string
+        str[/[a-zA-Z]+/]  == str
+    end
+
     def user_input
-        gets.strip.downcase
+        loop do
+            input = gets.strip.downcase
+            if all_letters(input)
+                return input
+            else
+                puts "Something went wrong, please input a letter, or make a guess!"
+            end
+        end
     end
 
     def process_input(input)
@@ -80,6 +93,7 @@ class Game
     end
     def game_over
             puts "Game Over!"
+            puts "The word was #{@word}"
             @game_state = false
             exit
         end
