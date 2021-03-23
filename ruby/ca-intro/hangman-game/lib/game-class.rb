@@ -90,7 +90,8 @@ class Game
     end
 
     def display_guessed_letters
-        puts "Guessed Letters"
+        puts
+        puts "Guessed Letters:"
         @guessed_letters.each do |letter|
             print "#{letter.upcase} "
         end
