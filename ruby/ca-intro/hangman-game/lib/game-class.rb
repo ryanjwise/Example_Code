@@ -46,8 +46,7 @@ class Game
     end
 
     def all_letters(str)
-        # Use 'str[/[a-zA-Z]*/] == str' to let all_letters
-        # yield true for the empty string
+        # Will return true only if passed string is alphanumeric
         str[/[a-zA-Z]+/]  == str
     end
 
