@@ -14,6 +14,7 @@ class Game
             line_seperator
             display_word
             display_lives
+            check_lives
             display_guessed_letters
             line_seperator
             display_instructions
@@ -59,7 +60,6 @@ class Game
     def process_letter(letter)
         @guessed_letters << letter
         update_lives(letter)
-        check_lives
     end
 
     def process_guess(guess)
@@ -80,7 +80,8 @@ class Game
     end
     def game_over
             puts "Game Over!"
-            @game_state = false 
+            @game_state = false
+            exit
         end
     end
 
