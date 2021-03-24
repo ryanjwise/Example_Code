@@ -1,8 +1,7 @@
 class Game
 
-    def initialize
-        @words = ['fillet', 'chicken', 'test', 'consider', 'implications', 'then', 'move', 'faster', 'and', 'break', 'things']
-        @word = @words.sample
+    def initialize(word)
+        @word = word
         @lives = @word.length + 2
         @guessed_letters = []
         @game_state = true
@@ -28,7 +27,7 @@ class Game
 
     def display_word
         @word.chars do | char |
-            if @guessed_letters.include?(char)
+            if @guessed_letters.include?(char) || !char.match?(/[a-z]/)
                 print "#{char.upcase} "
             else
                 print '_ '
@@ -98,7 +97,6 @@ class Game
             puts "Game Over!"
             puts "The word was #{@word}"
             @game_state = false
-            exit
         end
     end
 
