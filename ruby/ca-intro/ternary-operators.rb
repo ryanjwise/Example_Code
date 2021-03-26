@@ -24,13 +24,13 @@
 # num = gets.to_i
 
 # Ternary Operators
-# if num < 5 
-#     print 'is less than 5'
-# else
-#     print'num is not less than 5'
-# end
+if num < 5 
+    print 'is less than 5'
+else
+    print'num is not less than 5'
+end
 
-# num < 5 ? (puts 'is less than 5'):(puts 'is not less than 5')
+num < 5 ? (puts 'is less than 5'):(puts 'is not less than 5')
 
 
 # user = {name: 'daniel', lastname: 'ask'}
