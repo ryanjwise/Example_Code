@@ -22,12 +22,13 @@ end
 array_size = words.length
 
 #sort array (Array size may be reduced, not sure once for every is required)
-(array_size).times { puts array_size
-    (array_size-1).times { |i| 
-        if words[i] > words[i+1]
-            words[i], words[i+1] = words[i+1], words[i]
-        end
-    }
+(array_size).times do
+puts array_size
+(array_size-1).times { |i| 
+    if words[i] > words[i+1]
+        words[i], words[i+1] = words[i+1], words[i]
+    end
+end
 }
 
 puts
