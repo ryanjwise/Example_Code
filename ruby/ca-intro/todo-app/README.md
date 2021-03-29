@@ -2,23 +2,24 @@
 
 ## Purpose
 
-To do app that allows a user to easily maintain  a list of tasks
+To create an app that allows a user to easily keep track of task in terminal.
 
 ## Features
 
 ### MVP
 
-- Add tasks
-- Display tasks
-- Edit Tasks
-- Task complete
-- Remove tasks
-- Persistant storage
+- Add Task
+- Retrieve tasks/ List tasks
+- Remove a task
+- Task completion
+- Edit task
+- Persistent storage
 
 ### Extras
 
 - Dates
-- Notes on tasks
-- Subtasks
-- Sorting Tasks
-- Sharing Tasks
+- Task can have notes
+- Subtask
+- Categories
+- Sort tasks
+- Share tasks
