@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #container {
+        display: flex;
+        justify-content: space-around;
+      }
+      .column {
+        border: solid 1px black;
+        flex-grow: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .darkmode {
+        background-color: black;
+      }
+      #dragger {
+        background-color: red;
+        height: 50px;
+        width: 50px;
+      }
+      #last {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .drag {
+        width: 45%;
+        height: 100px;
+        background: orange;
+        border: solid 1px black;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      #to {
+      }
+      #from {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="column">
+        <form>
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" />
+          </div>
+          <div>
+            <label for="language">Language:</label>
+            <input id="language" />
+          </div>
+          <div>
+            <label for="cohort">Cohort:</label>
+            <input id="cohort" />
+          </div>
+          <button id="challenge-one">Submit Form</button>
+        </form>
+        <p id="output"></p>
+      </div>
+      <div class="column" id="challenge-two">
+        <button id="change-theme">Dark Mode</button>
+      </div>
+      <div id="last" class="column">
+        <div class="drag" id="from">
+          <div id="dragger" draggable="true"></div>
+        </div>
+        <div class="drag"></div>
+        <div class="drag"></div>
+        <div class="drag"></div>
+        <div class="drag"></div>
+        <div class="drag"></div>
+        <div class="drag"></div>
+        <div class="drag"></div>
+        <div class="drag"></div>
+        <div class="drag" id="to"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+      activity();
+    </script>
+  </body>
+</html>
