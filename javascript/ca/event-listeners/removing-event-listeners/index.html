@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#container {
+				display: flex;
+				justify-content: space-around;
+			}
+			.column {
+				border: solid 1px black;
+				flex-grow: 1;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="column">
+				<button id="five">+5</button>
+				<button id="ten" >+10</button>
+				<button id="fifteen">+15</button>
+				<p id="counter-one">0</p>
+			</div>
+			
+			<div class="column">
+				<button value="1" class='challenge-two'>Increment</button>
+				<button value="-1" class='challenge-two'>Decrement</button>
+				<button id="stop">Stop</button>
+				<p id="counter-two">0</p>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+		<script>activity()</script>
+	</body>
+</html>
