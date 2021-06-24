@@ -1,13 +1,12 @@
 function challengeOne() {
-  let button = document.querySelector("#challenge-one");
-  button.addEventListener("submit", function (event) {
+  let form = document.querySelector("form");
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
-    let form = document.querySelector("form");
-    let name = form.name;
-    let language = form.language;
-    let cohort = form.cohort;
-
-    // `Hello ${name}, hope you are enjoying learning about ${language} in ${cohort}`
+    let name = form.name.value;
+    let language = form.language.value;
+    let cohort = form.cohort.value;
+    let output = document.querySelector("#output")
+    output.innerHTML = `Hello ${name}, hope you are enjoying learning about ${language} in ${cohort}` 
   });
 }
 
