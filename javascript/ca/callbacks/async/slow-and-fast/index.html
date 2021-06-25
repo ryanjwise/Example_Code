@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slow Count</title>
+	<style>
+		#container {
+			padding: 2px;
+		}
+
+		#block {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			width: 100px;
+			background-color: aqua;
+			margin: 10px;
+		}
+
+		.number {
+			text-align: center;
+			width: 100%;
+			font-size: 70px;
+		}
+
+		.button {
+			padding: 5px;
+			border: 1px solid black;
+			background-color: lightgray;
+			display: inline-block;
+			width: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>The slow count</h1>
+	<div id="container">
+		<p id="description">Watch the counters update</p>
+		<div id="block">
+			<div class="number" id="fastNumber"></div>
+		</div>
+		<button class="button" id="fastButton">Add one!</button>
+		<div id="block">
+			<div class="number" id="slowNumber"></div>
+		</div>
+		<button class="button" id="slowButton">Add one!</button>
+	</div>
+	<script src="script_blocking.js">
+	</script>
+</body>
+
+</html>
