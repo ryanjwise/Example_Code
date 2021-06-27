@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Encounter</title>
+</head>
+<body>
+    <div class="pokemonImage">
+        <img src="" alt="The image or sprite of the Pokemon you encountered!"/>
+    </div>
+    <div class="pokemonName"></div>
+    <div class="pokemonType1"></div>
+    <div class="pokemonType2"></div>
+
+    <button id="create-encounter">Encounter a Pokemon!</button>
+
+    <script>
+        function getRandomNumberForPokeAPI(){
+            // The "808" is just a safe maximum for how many Pokemon are currently in the API.
+            // When they add more Pokemon, that number should go up.
+            let suitableNumber = Math.floor(Math.random() * 808)
+            return suitableNumber
+        }
+
+        function showPokemonData(data) {
+            console.log(data)
+            // 3. Display the data on the webpage as indicated in the description
+        }
+        
+        function getPokemonData(){
+            // 1. update with the correct url for POKEAPI:
+            const POKEAPI = ""
+            // 2. use fetch to call the API
+            // and call showPokemonData with the data returned from the fetch
+        }
+        
+        // 4. Add the event listener to the button, so that clicking the button
+        //    triggers a call to getPokemonData to display a new Pokemon
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Data</title>
+  </head>
+  <body>
+    <script>
+      function getRandomNumberForPokeAPI() {
+        // The "808" is just a safe maximum for how many Pokemon are currently in the API.
+        // When they add more Pokemon, that number should go up.
+        let suitableNumber = Math.floor(Math.random() * 808);
+        return suitableNumber;
+      }
+      function showPokemonData(data) {
+        // For now, just log the data
+        console.log(data);
+      }
+      function getPokemonData() {
+        // 1. update with the correct url for POKEAPI:
+        const POKEAPI = "https://pokeapi.co/api/v2/pokemon/";
+        // 2. use fetch to call the API
+        let data = fetch(POKEAPI + getRandomNumberForPokeAPI())
+          // .then((response) => { console.log(response)})
+          .then((response) => response.json())
+          .then((data) => showPokemonData(data))
+          .catch((error) => console.log(error));
+        // and call showPokemonData with the data returned from the fetch
+      }
+      getPokemonData();
+    </script>
+  </body>
+</html>
