@@ -55,11 +55,11 @@ function getStudentList(file, size) {
 
       Hint: Using promise chaining to make the implementation simpler
     */
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
       resolve (getData(file)
         .then((data) => createList(data))
         .then((list) => createGroup(list, size))
-        .catch((error) => reject(error.message))
+        .catch((error) => {throw error.message})
   )
   });
 }
